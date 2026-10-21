@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos base generales (Móvil primero) */
+/* ===== BASE: menos de 500px (móvil) ===== */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f6f8;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.card {
+  background-color: #f5f6f8;          /* mismo tono que el fondo */
+  color: #333;
+  padding: 18px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+
+  min-height: 290px;                  /* tarjeta alta */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;          /* contenido abajo */
+}
+
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+/* ===== MÁS DE 500px ===== */
+@media (width > 500px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    padding: 26px;
+  }
+
+  .card {
+    background-color: #f86d6d;
+    min-height: 200px;
+    padding: 22px;
+  }
+
+  .card-1 {
+    grid-column: span 2;
+    min-height: 350px;
+  }
+
+  .card-1 h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== 850px O MÁS (si quieres 4 columnas) ===== */
+@media (width >= 850px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card{
+    background-color: #6d89f8;
+    min-height: 200px;
+    padding: 22px;
+  }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+  <div class="card card-1">
+    <h2>Hola mundo 1</h2>
+    <p>Lorem ipsum dolor sit.</p>
+  </div>
+  <div class="card">
+    <h2>Hola mundo 2</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="card">
+    <h2>Hola mundo 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati possimus...</p>
+  </div>
+  <div class="card">
+    <h2>Hola mundo 4</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, fugit!</p>
+  </div>
+  <div class="card">
+    <h2>Hola mundo 5</h2>
+    <p>Lorem ipsum.</p>
+  </div>
+  <div class="card">
+    <h2>Hola mundo 6</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </div>
+  <div class="card">
+    <h2>Hola mundo 7</h2>
+    <p>Lorem ipsum dolor sit amet...</p>
+  </div>
+</div>
+
+</body>
+</html>
